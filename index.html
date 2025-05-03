@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les portraits et autoportraits d'Albrecht Dürer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <header>
+        <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        <nav>
+            <a href="page-synthèse.html">Page de synthèse</a>
+            <div class="dropdown">
+                <a href="#">Commentaires</a>
+                <div class="dropdown-content">
+                    <a href="webographie.html">Webographies</a>
+                    <a href="librairie-zotero.html">Librairie Zotero</a>
+                </div>
+            </div>
+            <a href="./a-propos.html">À propos</a>
+        </nav>
+    </header>
+    <div class="background-container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Albrecht_Dürer_-_1500_self-portrait_%28High_resolution_and_detail%29.jpg?uselang=fr"
+        alt="Portrait d'Albrecht Dürer"
+        class="background-image">
+    </div>
+    
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                    color: rgb(232, 213, 137); text-align: center; font-size: 3em; font-family: 'Georgia', serif;">
+          <h4>Albrecht Dürer</h4>
+          <h5>Ses portraits et autoportraits</h5>
+        </div>
+      
+    
+        <div style="margin: 0 0 0 0; position: relative;">
+            <div style="width: 100%; background-color: rgb(250, 241, 227); display: block; color: #444444; z-index: 1; ">
+                <div style="padding: 10% 20% 10% 20%; text-align: justify;">
+                    <h1>Ce site est consacré aux portraits et autoportraits d'Albrecht Dürer. Il a été réalisé dans le cadre d'un cours de cultures numériques à l'université Panthéon Sorbonne par trois étudiantes en deuxième année de licence d'Histoire de l'Art et Archéologie. Nous essaierons d'y développer ce thème au travers de commentaires webographiques de différents médias traitant du sujet.</h1>
+                </div>
+            </div>
+            <div style="display: flex; position: relative; padding: 10%; background-color: #232323; width: 100%;">
+                <div style="width: 50vw;">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 5</div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/F5023_Louvre_A_Durer_autoportrait_de_l_artiste_tenant_un_chardon_detail_rwk.jpg/1024px-F5023_Louvre_A_Durer_autoportrait_de_l_artiste_tenant_un_chardon_detail_rwk.jpg" style="max-width: 100%;">
+                      <div class="text">Autoportrait au chardon, 1493, détail, musée du Louvre</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 5</div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Albrecht_Dürer_-_Portrait_of_Oswolt_Krel_-_WGA6934.jpg" style="max-width: 100%;">
+                      <div class="text">Portrait d'Oswolt Krel, 1499, Munich, Alte Pinakothek</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 5</div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Albrecht_Dürer_Betende_Hände.jpg" style="max-width: 100%;">
+                      <div class="text">Mains en prière, dessin à la plume, vers 1508, musée Albertina de Vienne</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Albrecht_Dürer_-_1500_self-portrait_%28High_resolution_and_detail%29.jpg/960px-Albrecht_Dürer_-_1500_self-portrait_%28High_resolution_and_detail%29.jpg" style="max-width: 100%;">
+                        <div class="text">Autoportrait au manteau de fourrure, 1500,
+                            Munich, Alte Pinakothek</div>
+                        </div>
+
+                            <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Albrecht_Duerer_Man_of_Sorrows_drawing.jpg/826px-Albrecht_Duerer_Man_of_Sorrows_drawing.jpg" style="max-width: 100%;">
+                        <div class="text">Autoportrait comme l’homme de la douleur, 1522, Munich, Alte Pinakothek </div>
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                      <span class="dot" onclick="currentSlide(4)"></span> 
+                      <span class="dot" onclick="currentSlide(5)"></span> 
+                    </div>
+                </div>
+                    
+                    
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                </script>
+                </div>
+                <div style="color: #bbb; padding: 0 5% 0 5%; width: 50vw;">
+                    <h2>Albrecht Dürer : Maître de la Renaissance allemande</h2>
+                    <p>Peintre, graveur et théoricien, Albrecht Dürer (1471-1528) est célèbre pour ses autoportraits et son sens du détail. Son œuvre allie influence italienne et tradition germanique, marquant l’histoire de l’art européen.</p>
+                    <button 
+                        style="font-size: 1vw; padding: 1vw; margin: 0 1% 0 0; cursor: grab;" 
+                        onclick="window.open('https://fr.wikipedia.org/wiki/Albrecht_Dürer', '_blank');">
+                        en savoir plus
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+    <footer class="site-footer">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/99/Logo_of_the_Pantheon-Sorbonne_University_in_Paris.png"
+        alt="Logo Université"
+        class="footer-logo">
+      
+      <p class="footer-text">
+        Université Paris 1 Panthéon-Sorbonne - UFR03 Histoire de l'art & Archéologie - Culture & Compétences Numériques
+      </p>
+    </footer>
+    
+    <a href="#top" class="back-to-top" title="Retour en haut">&#8679;</a>
+    <script>
+        const btn = document.querySelector('.back-to-top');
+      
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            btn.classList.add('show');
+          } else {
+            btn.classList.remove('show');
+          }
+        });
+      </script>     
+</body>
+</html>

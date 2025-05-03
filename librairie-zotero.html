@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page synthèse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+    <header>
+        <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        <nav>
+            <a href="page-synthèse.html">Page de synthèse</a>
+            <div class="dropdown">
+                <a href="#">Commentaires</a>
+                <div class="dropdown-content">
+                    <a href="webographie.html">Webographies</a>
+                    <a href="librairie-zotero.html">Librairie Zotero</a>
+                </div>
+            </div>
+            <a href="./a-propos.html">À propos</a>
+        </nav>
+    </header>
+</style>
+</head>
+<body>
+
+  <script>
+    fetch("https://api.zotero.org/groups/5951144/items?format=json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("bibliographie");
+        data.forEach(item => {
+          const title = item.data.title || "Sans titre";
+          const creators = item.data.creators?.map(c => `${c.lastName}, ${c.firstName}`).join("; ") || "";
+          const year = item.data.date || "";
+    
+          const ref = document.createElement("p");
+          ref.innerHTML = `<strong>${creators}</strong> (${year}) – <i>${title}</i>`;
+          container.appendChild(ref);
+        });
+      });
+    </script>
+    
+    <div id="bibliographie"></div>
+    
+      <hr class="sep-marron">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/99/Logo_of_the_Pantheon-Sorbonne_University_in_Paris.png"
+        alt="Logo Université"
+        class="footer-logo">
+      
+      <p class="footer-text">
+        Université Paris 1 Panthéon-Sorbonne - UFR03 Histoire de l'art & Archéologie - Culture & Compétences Numériques
+      </p>
+    </footer>
+    <a href="#top" class="back-to-top" title="Retour en haut">&#8679;</a>
+    <script>
+        const btn = document.querySelector('.back-to-top');
+      
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            btn.classList.add('show');
+          } else {
+            btn.classList.remove('show');
+          }
+        });
+      </script>     
+</body>
+</html>
